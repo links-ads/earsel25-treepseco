@@ -1,0 +1,16 @@
+# @package _global_
+
+# specify here default configuration
+# order of defaults determines the order in which configs override each other
+defaults:
+  - model: tree_pseco
+  - _self_
+  - hydra: default
+
+data:
+  images_dir: data/predict_images
+
+seed: 99
+
+out_run_name: ${now:%Y-%m-%d}_${now:%H-%M-%S} # when using slurm you can pass the job id here
+out_folder_name: treePseco/${out_run_name}

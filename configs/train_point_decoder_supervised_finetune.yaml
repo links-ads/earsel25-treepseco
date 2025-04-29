@@ -1,0 +1,25 @@
+# @package _global_
+
+# specify here default configuration
+# order of defaults determines the order in which configs override each other
+defaults:
+  - model: point_decoder_finetune
+  - data: neon_tree
+  - training: point_decoder_finetune
+  - _self_
+  - hydra: default
+
+out_run_name: ${now:%Y-%m-%d}_${now:%H-%M-%S} # when using slurm you can pass the job id here
+out_folder_name: pt_dec_finetune/${out_run_name}
+
+seed: 99
+val_only: false
+
+model:
+  point_decoder:
+    mask_upscaling_type: default # (transposed) or bilinear
+    point_decoder_state_dict_path: pretrained/point_decoder/pt_dec_neon_pretrain_loss_04006.pth
+    prefix_to_rmv_in_state_dict: "pretrain_sam_point_decoder."
+
+training:
+  loss_type: ssim # or mse

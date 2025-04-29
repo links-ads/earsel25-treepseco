@@ -1,0 +1,10 @@
+defaults:
+  - heatmap_box_detector: default
+  - _self_
+
+point_decoder:
+  sam_type: "vit_h"
+  use_sam_pretrained: True
+  mask_upscaling_type: default # bilinear
+  point_decoder_state_dict_path: ""
+  prefix_to_rmv_in_state_dict: "pretrain_sam_point_decoder."

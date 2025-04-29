@@ -1,0 +1,39 @@
+defaults:
+  - _default
+  - _self_
+
+# point_decoder
+point_decoder_ckpt: "pretrained/neon_pretrained_point_decoders/point_decoder_neon_pretrain_epoch_epoch=71-val_loss_val_loss=0.04127.pth"
+use_precomp_features_and_heatmaps: False
+
+# cls_head
+num_roi_head_classifier_train_anchors: 256
+roi_head_classifier_train_pos_ratio: 0.25
+
+# General
+batch_size: 2
+num_workers: 4
+max_epochs: 100
+
+# val_check_interval: 1.0 # this for in epoch val, or when using steps
+check_val_every_n_epoch: 2 # this for val every n epoch
+
+# Optimizer and Scheduler
+learning_rate: 1e-4
+weight_decay: 0.0
+scheduler_patience: 4
+early_stopping_patience: 200
+
+# Lightning Tensorboard name
+experiment_name: "TreePseco"
+version: ""
+
+# Save checkpoint weight prefix
+key_to_save_prefix: "roi_head"
+
+# Viz
+viz_n_train_images: 5
+
+# # DEBUG #
+# viz_n_train_images: -1
+# viz_n_val_images: -1

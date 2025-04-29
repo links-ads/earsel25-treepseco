@@ -1,0 +1,10 @@
+# https://hydra.cc/docs/configure_hydra/intro/
+
+# output directory, generated dynamically on each run
+run:
+  dir: ${hydra:runtime.cwd}/outputs/${out_folder_name}
+sweep:
+  dir: ${hydra:runtime.cwd}/outputs/${out_folder_name}
+
+job:
+  chdir: False

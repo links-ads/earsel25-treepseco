@@ -1,0 +1,6 @@
+dataset_name: neon_tree
+train_img_dir: ./data/NEON/training_converted/images
+train_ann_file: ./data/NEON/training_converted/annotations.json
+val_img_dir: ./data/NEON/evaluation/images
+val_ann_file: ./data/NEON/evaluation/annotations.json
+augment: false

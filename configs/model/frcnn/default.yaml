@@ -1,0 +1,3 @@
+num_classes: 2
+state_dict: ???
+score_th: 0.4

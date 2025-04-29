@@ -1,0 +1,16 @@
+ws_smooth: 0
+ws_det: 2
+himn: 0.3
+pred_iou_thresh: 0
+stability_score_thresh: 0
+box_nms_thresh: 1.0
+points_only_multimask_output: true
+box_half_sides:
+  - 35
+  - 100
+neg_points_at_corners: false
+prompt_batch_size: 64
+do_box_filtering: false
+min_area: 0
+max_area: 50000
+max_aspect_ratio: 3

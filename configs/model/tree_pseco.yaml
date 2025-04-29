@@ -1,0 +1,13 @@
+# specify here default configuration
+# order of defaults determines the order in which configs override each other
+defaults:
+  - point_decoder: default
+  - heatmap_box_detector: default
+  - frcnn: default
+  - _self_
+
+point_decoder:
+  state_dict: pretrained/point_decoder/pt_dec_vda_finetuned_loss_46837.pth
+
+frcnn:
+  state_dict: pretrained/frcnn/frcnn_vda_mAP_14758.pth

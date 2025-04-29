@@ -1,0 +1,17 @@
+# General
+batch_size: 4
+num_workers: 4
+max_epochs: 500
+accelerator: "gpu"
+devices: 1
+# Lightning Tensorboard name
+version: ""
+# Lightning Trainer parameters for efficient training
+precision: 16-mixed
+# Visualization and logging
+log_every_n_steps: 10
+viz_train_images_every_n_epochs: 1
+viz_n_train_images: 5
+viz_val_images_every_n_epochs: 1
+viz_n_val_images: 10
+visualize_random_images: true

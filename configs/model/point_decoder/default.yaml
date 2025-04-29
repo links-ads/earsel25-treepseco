@@ -1,0 +1,4 @@
+sam_type: "vit_h"
+use_sam_pretrained: True
+state_dict: ???
+# mask_upscaling_type: "bilinear" # Options: default (transposed), bilinear 

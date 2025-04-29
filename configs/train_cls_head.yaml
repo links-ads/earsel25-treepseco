@@ -1,0 +1,33 @@
+# @package _global_
+
+# specify here default configuration
+# order of defaults determines the order in which configs override each other
+defaults:
+  - model: tree_pseco
+  - data: neon_tree
+  - training: cls_head
+  - _self_
+  - hydra: default
+
+# seed for random number generators in pytorch, numpy and python.random
+seed: 99
+# Validation
+val_only: false
+
+out_run_name: ${now:%Y-%m-%d}_${now:%H-%M-%S} # when using slurm you can pass the job id here
+out_folder_name: frccn/${out_run_name}
+
+model:
+  heatmap_box_detector:
+    himn: 0.3
+  roi_head_classifier:
+    accept_heatmap: false
+    accept_rgb: false
+    use_rn50: true
+  freeze_rn50_body: false
+
+training:
+  point_decoder_ckpt: pretrained/point_decoder/pt_dec_neon_pretrain_loss_04006.pth
+  rn50_ckpt: pretrained/rn50/NEON.pt
+  proposals_unique_out_name: ???
+  proposals_path_root: outputs/cached_proposals/${training.proposals_unique_out_name}

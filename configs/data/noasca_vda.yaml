@@ -1,0 +1,6 @@
+dataset_name: noasca_vda
+train_img_dir: ./data/noasca_vda
+train_ann_file: ./data/noasca_vda/train.json
+val_img_dir: ./data/noasca_vda
+val_ann_file: ./data/noasca_vda/val.json
+augment: false

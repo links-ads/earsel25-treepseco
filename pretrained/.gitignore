@@ -1,0 +1,3 @@
+#This folder should contain good state dict (.pth files)
+*
+!.gitignore
