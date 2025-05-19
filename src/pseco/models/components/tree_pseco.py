@@ -51,6 +51,9 @@ class TreePseco(nn.Module):
         tree_bboxes_filtered_np = tree_bboxes_filtered.cpu().numpy()
         tree_pred_scores_filtered_np = tree_pred_scores_filtered.cpu().numpy()
         
+        if tree_bboxes_filtered.shape[0] == 0:
+            return (tree_bboxes_filtered_np, tree_pred_scores_filtered_np, np.empty((0, 1, 1024, 1024), dtype=bool))
+        
         masks, iou_predictions, _ = self.heatmap_box_detector.predict_torch(img_embedding=image_embeddings,
                                                 point_coords=None,
                                                 point_labels=None,

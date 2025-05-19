@@ -67,6 +67,10 @@ def get_transform_with_proposals(augment):
     return transform
 
 class CachedProposalsDataset(Dataset):
+    """Purpose:
+    Dataset used to load together with the images the proposal made before the classification.
+    It is used to train the classification and regression part of the model.
+    """
     def __init__(self, image_dir, annotation_file, proposals_path_root, partition, augment=False):
         self.image_dir = image_dir
         self.proposals_path_root = proposals_path_root

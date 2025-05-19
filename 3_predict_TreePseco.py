@@ -45,7 +45,7 @@ def log_fig(logger, idx, image, tree_bboxes_np, masks_np):
         show_mask(mask, ax, random_color=True)
     
     plt.tight_layout()
-    logger.experiment.add_figure(f'pred_{idx}', fig)
+    logger.experiment.add_figure(f'pred', fig, global_step=idx)
     plt.close(fig)
 
 @hydra.main(config_path="configs", config_name="predict_tree_pseco", version_base="1.1")

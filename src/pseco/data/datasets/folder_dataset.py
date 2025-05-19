@@ -16,6 +16,9 @@ def get_pad_and_resize_transforms():
     return transform
 
 class FolderDataset(Dataset):
+    """Purposes:
+        Dataset to load images from a folder.
+    """
     def __init__(self, images_dir):
         self.images_dir = images_dir
         self.all_images = os.listdir(images_dir)

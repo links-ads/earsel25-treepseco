@@ -44,8 +44,11 @@ def build_tree_pseco(cfg: dict):
     custom_rcnn.load_state_dict(adapted_state_dict, strict=True)
     custom_rcnn = custom_rcnn.cuda()
     
-    return TreePseco(point_decoder,
+    model = TreePseco(point_decoder,
                     heatmap_box_detector,
                     custom_rcnn,
                     score_th=cfg.model.frcnn.score_th
                     )
+    model = model.eval() # instantiate the model always in eval mode since it is not trainable
+    
+    return model 
