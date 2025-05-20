@@ -37,6 +37,9 @@ class TreePseco(nn.Module):
             pred_heatmap_np,
             proposals_only=True,
             )
+        # no proposals case
+        if proposals_np.shape[0] == 0:
+            return (np.empty((0, 4), dtype=np.float32), np.empty((0,), dtype=np.float32), np.empty((0, 1, 1024, 1024), dtype=bool))
         
         detections = self.custom_rcnn(images=x, proposals=[torch.tensor(proposals_np, device=x.device, dtype=torch.float32)])[0]
         tree_idxes = detections['labels'] == 1 # useless since bg boxes already removed
@@ -51,6 +54,7 @@ class TreePseco(nn.Module):
         tree_bboxes_filtered_np = tree_bboxes_filtered.cpu().numpy()
         tree_pred_scores_filtered_np = tree_pred_scores_filtered.cpu().numpy()
         
+        # no detections case
         if tree_bboxes_filtered.shape[0] == 0:
             return (tree_bboxes_filtered_np, tree_pred_scores_filtered_np, np.empty((0, 1, 1024, 1024), dtype=bool))
         

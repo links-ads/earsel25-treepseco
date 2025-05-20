@@ -397,7 +397,10 @@ class HeatmapBoxDetector(nn.Module):
             peaks_np = peaks_tensor.numpy()
         
         if peaks_tensor.shape[0] == 0:
-            return peaks_np, np.empty((0, 4)), np.empty((0, 1024, 1024)), np.empty((0)), np.empty((0))
+            if proposals_only:
+                return np.empty((0, 4), dtype=np.float32)
+            else:
+                return peaks_np, np.empty((0, 4)), np.empty((0, 1024, 1024)), np.empty((0)), np.empty((0))
         
         img_embedding = img_embedding.cuda()
         
