@@ -186,16 +186,14 @@ We thank the original authors and maintainers for their valuable contributions t
 
 If you find this work useful in your research, please consider citing:
 
-#TODO put bibtex
-
-<!-- ```bibtex
-@misc{vaschetti2024treepseco,
-      title={TreePseCo: Scaling Individual Tree Crown Segmentation using Large Vision Models},
-      author={Jacopo Lungo Vaschetti and Edoardo Arnaudo and Claudio Rossi},
-      year={2025},
-      eprint={<ARXIV_ID>},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      publisher={},
-      url={<PAPER_URL_OR_DOI>}
-} -->
+```bibtex
+@Article{isprs-archives-XLVIII-M-7-2025-275-2025,
+AUTHOR = {Lungo Vaschetti, J. and Arnaudo, E. and Rossi, C.},
+TITLE = {TreePseCo: Scaling Individual Tree Crown Segmentation using Large Vision Models},
+JOURNAL = {The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences},
+VOLUME = {XLVIII-M-7-2025},
+YEAR = {2025},
+PAGES = {275--282},
+URL = {https://isprs-archives.copernicus.org/articles/XLVIII-M-7-2025/275/2025/},
+DOI = {10.5194/isprs-archives-XLVIII-M-7-2025-275-2025}
+}
