@@ -7,7 +7,7 @@
   <sup>1</sup> Fondazione LINKS, AI, Data & Space, Torino, Italy
   <br>
 
-  [![Paper](https://img.shields.io/badge/Paper-Link-b31b1b.svg)](<PAPER_URL_OR_DOI>)
+  [![Paper](https://img.shields.io/badge/Paper-Link-b31b1b.svg)](https://isprs-archives.copernicus.org/articles/XLVIII-M-7-2025/275/2025/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
