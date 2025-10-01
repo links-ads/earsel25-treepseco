@@ -12,9 +12,9 @@
 
 ---
 
-**Overview** | **Installation** | **Usage** | **Finetuning** | **Paper** | **Citation**
-:---: | :---: | :---: | :---: | :---: | :---:
-[Jump](#overview) | [Jump](#installation) | [Jump](#how-to-predict-with-treepseco) | [Jump](#how-to-finetune-treepseco-on-your-data) | [Jump](#associated-paper) | [Jump](#citation)
+**Overview** | **Installation** | **Usage** | **Finetuning** | **Paper**
+:---: | :---: | :---: | :---: | :---:
+[Jump](#overview) | [Jump](#installation) | [Jump](#how-to-predict-with-treepseco) | [Jump](#how-to-finetune-treepseco-on-your-data) | [Jump](#citation)
 
 </div>
 
